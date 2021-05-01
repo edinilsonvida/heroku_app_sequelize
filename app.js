@@ -1,3 +1,4 @@
+require('dotenv/config');
 const express = require('express');
 const app = express();
 
@@ -79,8 +80,8 @@ app.post("/edition/:id", function (req, res) {
         });
 });
 
-app.listen(8000, function () {
-    console.log("Servidor está executando na porta 8000.");
+app.listen(process.env.PORT, function () {
+    console.log("Servidor está executando.");
 });
 
 
